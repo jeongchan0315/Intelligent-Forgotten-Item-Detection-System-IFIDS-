@@ -1,0 +1,27 @@
+Parts subject to change:
+Arduino Uno
+RFID tags
+MFRC522 RFID reader module
+HuskyLens
+MFRC522 RFID reader module
+RFID tags/cards (5–10 tags)
+HuskyLens
+Magnetic reed switch (door open/close sensor)
+Optional PIR motion sensor (detect approach)
+At least one:
+0.96" I2C OLED display (SSD1306)
+Active buzzer (alarm sound)
+RGB LED (status indicator)
+Breadboard
+Jumper wires kit
+5V USB power supply
+Optional but HIGH VALUE upgrades
+MicroSD card module
+Pick one:
+ESP8266 Wi-Fi module OR ESP32 (as secondary module)
+OR Bluetooth module (HC-05)
+DS3231 RTC module (real-time clock)
+
+Optional “premium vision upgrade” (only if wanting extra depth)
+ESP32-CAM module
+But not necessary if already using HuskyLens.
