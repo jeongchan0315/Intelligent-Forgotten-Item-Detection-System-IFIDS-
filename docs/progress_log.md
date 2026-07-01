@@ -14,7 +14,7 @@
 -Developed understanding of how the completed product may look and feel
 
 ##July 1, 2026
--Created an early draft for a flowchart on IFIDS
+-Created an early draft for a flowchart on IFIDS (User flow)
 -Began planning a hardware block diagram
 
 ##
