@@ -12,3 +12,9 @@
 -Further developed programming skills in Arduino IDE
 -Created a simple button-reactive buzzer system, with the button again simulating RFID tag detection
 -Developed understanding of how the completed product may look and feel
+
+##July 1, 2026
+-Created an early draft for a flowchart on IFIDS
+-Began planning a hardware block diagram
+
+##
