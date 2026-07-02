@@ -17,4 +17,9 @@
 -Created an early draft for a flowchart on IFIDS (User flow)
 -Began planning a hardware block diagram
 
+##July 2, 2026
+-Created an early hardware block diagram draft
+-Hardware block diagram is currently modeled to be simple and also wired
+-Final product is planned to be wireless; changes will be made later on
+
 ##
