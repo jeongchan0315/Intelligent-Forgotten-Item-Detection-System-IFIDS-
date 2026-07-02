@@ -1,3 +1,4 @@
+//Copyright 2026 Jeongchan Lee
 /*Slightly developed version of June 26*/
 
 const int buzzerPin = 8;
