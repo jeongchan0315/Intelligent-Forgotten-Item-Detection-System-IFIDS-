@@ -21,4 +21,4 @@ In everyday life, people are constantly forgetting minor details that are report
 
 
 ## References
-Godman, H. (2025, April 1). How to stop stressing over minor memory lapses. Harvard Health Publishing. https://www.health.harvard.edu/mind-and-mood/how-to-stop-stressing-over-minor-memory-lapses
+Godman, H. (2025, April 1). *How to stop stressing over minor memory lapses.* Harvard Health Publishing. https://www.health.harvard.edu/mind-and-mood/how-to-stop-stressing-over-minor-memory-lapses
