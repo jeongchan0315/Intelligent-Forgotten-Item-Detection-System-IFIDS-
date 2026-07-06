@@ -1,4 +1,4 @@
-#IFIDS Progress log ***View code***
+#IFIDS Progress log
 
 ##June 25, 2026
 -Began project planning
