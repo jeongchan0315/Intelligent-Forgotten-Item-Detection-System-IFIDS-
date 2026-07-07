@@ -6,18 +6,8 @@ IFIDS (Intelligent Forgotten Item Detection System) is a departure detection sys
 ## Problem Statement
 In everyday life, people are constantly forgetting minor details that are reportedly only small inconveniences. However, these memory lapses tend to lead to stress build-up, ultimately reducing cognitive skills.
 
-
-
-
-
-
-
-
-
-
-
-
-
+## Design Objective
+The IFIDS will remind users of items they have forgotten and help them leave the establishment without memory lapses, thereby reducing stress. Additionally, the IFIDS also exists to improve upon existing products.
 
 
 ## References
