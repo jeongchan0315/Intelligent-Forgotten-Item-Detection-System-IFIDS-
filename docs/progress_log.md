@@ -24,6 +24,10 @@
 
 ## July 6, 2026
 - Further developed the README, now explaining what the project does
-- Cited resources used for research within the project
+- Cited resource(s) used for research within the project
 
-##
+## July 7, 2026
+- Reconsidered the full use of the HuskyLens
+- Realized the physical limitations of the HuskyLens, such as the camera requiring the user to leave their camera-detected items in the same space every day, which is inconvenient. Due to the HuskyLens creating newfound annoyances, the HuskyLens will possibly be repurposed into a user detection system, no longer tracking items but rather learning the users' faces to only alert of items that each user needs.
+
+## 
