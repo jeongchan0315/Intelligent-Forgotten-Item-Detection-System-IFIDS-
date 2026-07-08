@@ -5,7 +5,7 @@
 - Created a parts list (Subject to change)
 
 ## June 26, 2026
-- Started on the program for the final product
+- Started on experimental programs for learning about the final product's formatting
 - Created a simple button detection mechanic to simulate RFID tag detection
 
 ## June 27, 2026
@@ -28,7 +28,7 @@
 
 ## July 7, 2026
 - Reconsidered the full use of the HuskyLens
-- Realized the physical limitations of the HuskyLens, such as the camera requiring the user to leave their camera-detected items in the same space every day, which is inconvenient. Due to the HuskyLens creating newfound annoyances, the HuskyLens will possibly be repurposed into a user detection system, no longer tracking items but rather learning the users' faces to only alert of items that each user needs.
+- Realized the physical limitations of the HuskyLens, such as the camera requiring the user to leave their camera-detected items in the same space every day, which is inconvenient. Due to HuskyLens creating new annoyances, it will be repurposed as a user detection system, no longer tracking items but learning users' faces to alert only on items each user needs.
 
 ## July 8, 2026
 - Reiterated the flowchart to match the HuskyLens repurposing
