@@ -30,4 +30,6 @@
 - Reconsidered the full use of the HuskyLens
 - Realized the physical limitations of the HuskyLens, such as the camera requiring the user to leave their camera-detected items in the same space every day, which is inconvenient. Due to the HuskyLens creating newfound annoyances, the HuskyLens will possibly be repurposed into a user detection system, no longer tracking items but rather learning the users' faces to only alert of items that each user needs.
 
-## 
+## July 8, 2026
+- Reiterated the flowchart to match the HuskyLens repurposing
+- HuskyLens is now planned to read the User's face, send the data to the Arduino, and have the Arduino pull up a User-specific list per User
