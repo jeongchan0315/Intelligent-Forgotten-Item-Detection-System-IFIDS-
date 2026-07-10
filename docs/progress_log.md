@@ -33,3 +33,6 @@
 ## July 8, 2026
 - Reiterated the flowchart to match the HuskyLens repurposing
 - HuskyLens is now planned to read the User's face, send the data to the Arduino, and have the Arduino pull up a User-specific list per User
+
+## July 9, 2026
+- Ordered additional missing parts to begin prototype construction soon
