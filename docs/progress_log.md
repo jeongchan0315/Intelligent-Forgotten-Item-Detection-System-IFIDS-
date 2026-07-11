@@ -36,3 +36,6 @@
 
 ## July 9, 2026
 - Ordered additional missing parts to begin prototype construction soon
+
+## July 10, 2026
+- Wired and experimented with 1602A LCD to prepare for LED display on the final product
