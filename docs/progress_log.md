@@ -39,3 +39,4 @@
 
 ## July 10, 2026
 - Wired and experimented with 1602A LCD to prepare for LED display on the final product
+- Code used from ArduinoDocs "Liquid Crystal Display (LCD) with Arduino"
