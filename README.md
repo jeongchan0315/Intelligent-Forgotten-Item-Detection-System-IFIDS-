@@ -12,3 +12,4 @@ The IFIDS will remind users of items they have forgotten and help them leave the
 
 ## References
 Godman, H. (2025, April 1). *How to stop stressing over minor memory lapses.* Harvard Health Publishing. https://www.health.harvard.edu/mind-and-mood/how-to-stop-stressing-over-minor-memory-lapses
+Arduino. (n.d.). Liquid crystal displays (LCD) with Arduino. Arduino Documentation. https://docs.arduino.cc/learn/electronics/lcd-displays/
