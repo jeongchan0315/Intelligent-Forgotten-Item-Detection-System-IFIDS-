@@ -20,7 +20,7 @@
 ## July 2, 2026
 - Created an early hardware block diagram draft
 - Hardware block diagram is currently modeled to be simple and also wired
-- Final product is planned to be wireless; changes will be made later on
+- Final product is planned to be wireless; a WiFi module may be added in the future
 
 ## July 6, 2026
 - Further developed the README, now explaining what the project does
@@ -38,5 +38,10 @@
 - Ordered additional missing parts to begin prototype construction soon
 
 ## July 10, 2026
-- Wired and experimented with 1602A LCD to prepare for LED display on the final product
+- Wired and experimented with 1602A LCD to prepare for LED display on the prototype
 - Code used from ArduinoDocs "Liquid Crystal Display (LCD) with Arduino"
+
+## July 13, 2026
+- Wired and experimented with the MFRC522 RFID reading module to recognize items
+- Wired and experimented with the HuskeyLens to recognize certain faces, assign face ID's, and activate a buzzer upon finding a not registered face
+- Construction for the prototype will begin soon
