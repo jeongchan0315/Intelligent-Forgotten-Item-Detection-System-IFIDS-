@@ -1,4 +1,4 @@
-# Parts subject to change:
+# Parts subject to change (Designed for final iteration excluding prototypes):
 - Arduino Uno
 - RFID tags
 - MFRC522 RFID reader module
