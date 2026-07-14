@@ -1,0 +1,57 @@
+#include "HUSKYLENS.h"
+#include "SoftwareSerial.h"
+
+HUSKYLENS huskylens;
+
+SoftwareSerial mySerial(10, 11); 
+
+
+const int buzzerPin = 2;
+
+void setup() {
+  Serial.begin(9600);      
+  mySerial.begin(9600);    
+
+  pinMode(buzzerPin, OUTPUT);
+
+  while (!huskylens.begin(mySerial)) {
+    Serial.println("HuskyLens not detected!");
+    delay(500);
+  }
+
+  Serial.println("HuskyLens connected!");
+}
+
+void loop() {
+
+  if (!huskylens.request()) {
+    Serial.println("Request failed");
+    return;
+  }
+
+  while (huskylens.available()) {
+
+    HUSKYLENSResult result = huskylens.read();
+
+    if (result.ID == 1) {
+      Serial.println("John");
+      digitalWrite(buzzerPin, LOW); 
+    }
+
+    else if (result.ID == 2) {
+      Serial.println("Issac");
+      digitalWrite(buzzerPin, HIGH); 
+      delay(500);
+      digitalWrite(buzzerPin, LOW);  
+    }
+
+    else if (result.ID == 0) {
+      Serial.println("Unknown face");
+      digitalWrite(buzzerPin, HIGH); 
+      delay(500);
+      digitalWrite(buzzerPin, LOW);
+    }
+  }
+
+  delay(500);
+}
