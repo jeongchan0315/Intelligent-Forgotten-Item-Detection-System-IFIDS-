@@ -38,10 +38,11 @@
 - Ordered additional missing parts to begin prototype construction soon
 
 ## July 10, 2026
-- Wired and experimented with 1602A LCD to prepare for LED display on the prototype
+- Wired and experimented with the 1602A LCD to prepare for an LED display on the prototype
 - Code used from ArduinoDocs "Liquid Crystal Display (LCD) with Arduino"
 
 ## July 13, 2026
 - Wired and experimented with the MFRC522 RFID reading module to recognize items
-- Wired and experimented with the HuskeyLens to recognize certain faces, assign face ID's, and activate a buzzer upon finding a not registered face
+- Wired and experimented with the HuskeyLens to recognize certain faces, assign face ID's, and activate a buzzer upon finding an unregistered face
 - Construction for the prototype will begin soon
+- HuskeyLens and MFRC522 libraries were downloaded externally
