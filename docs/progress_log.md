@@ -46,4 +46,8 @@
 - Wired and experimented with the HuskeyLens to recognize certain faces, assign face ID's, and activate a buzzer upon finding an unregistered face
 - Construction for the prototype will begin soon
 - HuskeyLens and MFRC522 libraries were downloaded externally
-- Ideally, RFID tagging should be switched out for UHF RFID due to limited range of MFRC522
+- Ideally, RFID tagging should be switched out for UHF RFID due to the limited range of the MFRC522
+
+## July 15, 2026
+- Completed Prototype One, Proof of Concept
+- Switched previous experimental codes to now work under an I2C bus
