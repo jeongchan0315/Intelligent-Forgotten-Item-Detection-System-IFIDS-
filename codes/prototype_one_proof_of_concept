@@ -1,0 +1,277 @@
+#include "HUSKYLENS.h"
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+#include <SPI.h>
+#include <MFRC522.h>
+
+
+// ---------- I2C ----------
+HUSKYLENS huskylens;
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+
+// ---------- RFID ----------
+#define SS_PIN 10
+#define RST_PIN 9
+
+MFRC522 rfid(SS_PIN, RST_PIN);
+
+
+// RFID UIDs
+
+// Keys
+byte keysUID[] = {0xD1, 0x31, 0x6B, 0x06};
+
+// Wallet
+byte walletUID[] = {0x23, 0x4C, 0xCA, 0x06};
+
+
+// ---------- STATUS ----------
+bool reynoldsDetected = false;
+bool keysPresent = false;
+bool walletPresent = false;
+
+
+
+void setup() {
+
+  Serial.begin(9600);
+
+  Wire.begin();
+
+
+  // LCD
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0,0);
+  lcd.print("Starting...");
+
+
+  // HuskyLens
+  while (!huskylens.begin(Wire)) {
+
+    lcd.clear();
+    lcd.print("HuskyLens");
+    lcd.setCursor(0,1);
+    lcd.print("Not Found");
+
+    delay(500);
+  }
+
+
+  // RFID
+  SPI.begin();
+  rfid.PCD_Init();
+
+
+  lcd.clear();
+  lcd.print("System Ready");
+
+  delay(1000);
+}
+
+
+
+void loop() {
+
+
+  // -------------------------
+  // FACE DETECTION
+  // -------------------------
+
+  reynoldsDetected = false;
+
+
+  if (huskylens.request()) {
+
+
+    while (huskylens.available()) {
+
+
+      HUSKYLENSResult result = huskylens.read();
+
+
+      if (result.command == COMMAND_RETURN_BLOCK) {
+
+
+        if (result.ID == 1) {
+
+          reynoldsDetected = true;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+  // -------------------------
+  // RFID SCANNING
+  // -------------------------
+
+  byte detectedItem = scanRFID();
+
+
+  if (detectedItem == 1) {
+
+    keysPresent = true;
+
+  }
+
+
+  if (detectedItem == 2) {
+
+    walletPresent = true;
+
+  }
+
+
+
+
+  // -------------------------
+  // LCD DISPLAY
+  // -------------------------
+
+  lcd.clear();
+
+
+  if (reynoldsDetected && keysPresent && walletPresent) {
+
+    lcd.setCursor(0,0);
+    lcd.print("Good to go");
+
+  }
+
+
+  else if (!reynoldsDetected) {
+
+    lcd.setCursor(0,0);
+    lcd.print("Unknown User");
+
+  }
+
+
+  else if (!keysPresent && !walletPresent) {
+
+    lcd.setCursor(0,0);
+    lcd.print("Missing Both");
+
+  }
+
+
+  else if (!keysPresent) {
+
+    lcd.setCursor(0,0);
+    lcd.print("Missing Keys");
+
+  }
+
+
+  else if (!walletPresent) {
+
+    lcd.setCursor(0,0);
+    lcd.print("Missing Wallet");
+
+  }
+
+
+  delay(500);
+
+}
+
+
+
+
+
+
+// -------------------------
+// RFID FUNCTION
+// -------------------------
+
+byte scanRFID() {
+
+
+  if (!rfid.PICC_IsNewCardPresent()) {
+
+    return 0;
+
+  }
+
+
+  if (!rfid.PICC_ReadCardSerial()) {
+
+    return 0;
+
+  }
+
+
+
+  bool keysMatch = true;
+  bool walletMatch = true;
+
+
+
+  Serial.print("UID: ");
+
+
+
+  for (byte i = 0; i < rfid.uid.size; i++) {
+
+
+    byte current = rfid.uid.uidByte[i];
+
+
+    Serial.print(current, HEX);
+    Serial.print(" ");
+
+
+
+    if (current != keysUID[i]) {
+
+      keysMatch = false;
+
+    }
+
+
+    if (current != walletUID[i]) {
+
+      walletMatch = false;
+
+    }
+
+  }
+
+
+  Serial.println();
+
+
+
+  rfid.PICC_HaltA();
+
+
+
+  if (keysMatch) {
+
+    Serial.println("Keys detected");
+    return 1;
+
+  }
+
+
+
+  if (walletMatch) {
+
+    Serial.println("Wallet detected");
+    return 2;
+
+  }
+
+
+
+  return 0;
+
+}
