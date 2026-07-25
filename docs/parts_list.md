@@ -3,9 +3,6 @@
 - RFID tags
 - MFRC522 RFID reader module
 - HuskyLens
-- MFRC522 RFID reader module
-- RFID tags/cards (5–10 tags)
-- HuskyLens
 - Magnetic reed switch (door open/close sensor)
 - Optional PIR motion sensor (detect approach)
 - **At least one:**
