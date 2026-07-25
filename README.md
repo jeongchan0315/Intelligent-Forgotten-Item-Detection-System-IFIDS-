@@ -17,7 +17,7 @@ The IFIDS will remind users of items they have forgotten and help them leave the
 - Integrated MFCR522 RFID Reader module to the LCD and HuskeyLens
 ### Prototype Behavior
 - Detects a user using a HuskeyLens
-- Upon detecting a registered User, a Missing statement will appear under the User's name, waiting for item detection
+- Upon detecting a registered User, a Missing statement will appear on the LCD, waiting for item detection
 - Confirms whether or not items are present
 - Displays "Good to go" if all items are present. Otherwise identifies what is currently missing
 ### Problems Overcome
